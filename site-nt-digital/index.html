@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trinity Digital Company | Organize & Evolve Your Passions</title>
+  <meta name="description" content="Trinity Digital Company LLC — Premium mobile/web applications and educational ebooks designed to help you organize, manage, and master your favorite hobbies and passions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;family=Sora:wght@400..800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .nav-link.active {
+      color: var(--white) !important;
+      background: rgba(0, 229, 195, 0.1);
+    }
+  </style>
+  <style>
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideOutRight {
+        from {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+  </style>
+</head>
+<body class="lang-en" cz-shortcut-listen="true">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo" id="logo-link">
+        <span class="logo-icon">TD</span>
+        <span class="logo-text">Trinity <strong>Digital</strong></span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#sobre" class="nav-link">
+          <span class="lang-en">About</span>
+          <span class="lang-pt">Sobre</span>
+        </a>
+        <a href="#servicos" class="nav-link">
+          <span class="lang-en">Products</span>
+          <span class="lang-pt">Produtos</span>
+        </a>
+        <a href="#diferenciais" class="nav-link">
+          <span class="lang-en">Why Us</span>
+          <span class="lang-pt">Diferenciais</span>
+        </a>
+        <a href="#numeros" class="nav-link">
+          <span class="lang-en">Stats</span>
+          <span class="lang-pt">Números</span>
+        </a>
+        <a href="#contato" class="nav-link">
+          <span class="lang-en">Contact</span>
+          <span class="lang-pt">Contato</span>
+        </a>
+        <div class="lang-switcher">
+          <button class="lang-btn" id="lang-btn-en">EN</button>
+          <button class="lang-btn" id="lang-btn-pt">PT</button>
+        </div>
+      </nav>
+      <a href="#contato" class="btn btn-primary btn-nav">
+        <span class="lang-en">Contact Us</span>
+        <span class="lang-pt">Fale Conosco</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#sobre" class="mobile-link">
+      <span class="lang-en">About</span>
+      <span class="lang-pt">Sobre</span>
+    </a>
+    <a href="#servicos" class="mobile-link">
+      <span class="lang-en">Products</span>
+      <span class="lang-pt">Produtos</span>
+    </a>
+    <a href="#diferenciais" class="mobile-link">
+      <span class="lang-en">Why Us</span>
+      <span class="lang-pt">Diferenciais</span>
+    </a>
+    <a href="#numeros" class="mobile-link">
+      <span class="lang-en">Stats</span>
+      <span class="lang-pt">Números</span>
+    </a>
+    <a href="#contato" class="mobile-link">
+      <span class="lang-en">Contact</span>
+      <span class="lang-pt">Contato</span>
+    </a>
+    <div class="lang-switcher" style="margin-top:1rem;justify-content:center;">
+      <button class="lang-btn" id="lang-btn-en-mob">EN</button>
+      <button class="lang-btn" id="lang-btn-pt-mob">PT</button>
+    </div>
+    <a href="#contato" class="btn btn-primary" style="margin-top:1rem;text-align:center;">
+      <span class="lang-en">Contact Us</span>
+      <span class="lang-pt">Fale Conosco</span>
+    </a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        <span class="lang-en">Empowering your hobbies and passions every day</span>
+        <span class="lang-pt">Impulsionando seus hobbies e paixões todos os dias</span>
+      </div>
+      <h1 class="hero-title reveal lang-en">
+        Organize, Manage &<br>
+        <span class="gradient-text">Evolve</span> Your<br>
+        Passions
+      </h1>
+      <h1 class="hero-title reveal lang-pt">
+        Organize, Gerencie &<br>
+        <span class="gradient-text">Evolua</span> Suas<br>
+        Paixões
+      </h1>
+      <p class="hero-sub reveal">
+        <span class="lang-en">Stop tracking your progress on messy papers. We build clean mobile/web apps and write practical ebooks to help you master your favorite crafts and activities.</span>
+        <span class="lang-pt">Pare de registrar seu progresso em papéis soltos. Desenvolvemos aplicativos simples e escrevemos ebooks práticos para ajudar você a dominar suas atividades favoritas.</span>
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#servicos" class="btn btn-primary btn-lg">
+          <span class="lang-en">Explore Our Products</span>
+          <span class="lang-pt">Explorar Nossos Produtos</span>
+        </a>
+        <a href="#sobre" class="btn btn-ghost btn-lg">
+          <span class="lang-en">About Trinity</span>
+          <span class="lang-pt">Sobre a Trinity</span>
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat-item">
+          <span class="stat-num" data-target="4">0</span>
+          <span class="stat-num-suffix"></span>
+          <span class="stat-label">
+            <span class="lang-en">Years in Market</span>
+            <span class="lang-pt">Anos de Mercado</span>
+          </span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="350">0</span>
+          <span class="stat-num-suffix">+</span>
+          <span class="stat-label">
+            <span class="lang-en">Clients Served</span>
+            <span class="lang-pt">Clientes Atendidos</span>
+          </span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="1500">0</span>
+          <span class="stat-num-suffix">+</span>
+          <span class="stat-label">
+            <span class="lang-en">Digital Product Copies Sold</span>
+            <span class="lang-pt">Cópias de Produtos Digitais Vendidas</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="sobre" id="sobre">
+    <div class="container sobre-grid">
+      <div class="sobre-visual">
+        <div class="sobre-card-main">
+          <div class="sobre-icon-large">✨</div>
+          <p class="sobre-card-text">
+            <span class="lang-en">"We build premium applications and publish educational ebooks that transform your personal interests and hobbies into organized, fulfilling journeys of constant evolution."</span>
+            <span class="lang-pt">"Desenvolvemos aplicativos premium e publicamos ebooks educacionais que transformam seus interesses pessoais e hobbies em jornadas organizadas de constante evolução."</span>
+          </p>
+          <div class="sobre-card-author">
+            <span class="lang-en">Trinity Digital Team</span>
+            <span class="lang-pt">Equipe Trinity Digital</span>
+          </div>
+        </div>
+        <div class="sobre-card-float sobre-card-float-1">
+          <span class="float-icon">📈</span>
+          <div>
+            <strong class="lang-en">Evolution</strong>
+            <strong class="lang-pt">Evolução</strong>
+            <small class="lang-en">Consistent hobby growth</small>
+            <small class="lang-pt">Crescimento contínuo</small>
+          </div>
+        </div>
+        <div class="sobre-card-float sobre-card-float-2">
+          <span class="float-icon">🎯</span>
+          <div>
+            <strong class="lang-en">Structure</strong>
+            <strong class="lang-pt">Estrutura</strong>
+            <small class="lang-en">Organized routines</small>
+            <small class="lang-pt">Rotinas organizadas</small>
+          </div>
+        </div>
+      </div>
+      <div class="sobre-text">
+        <div class="section-label reveal">
+          <span class="lang-en">Who We Are</span>
+          <span class="lang-pt">Quem Somos</span>
+        </div>
+        <h2 class="section-title reveal">Trinity Digital Company</h2>
+        <p class="section-desc reveal">
+          <span class="lang-en">We specialize in designing premium digital products—including mobile/web applications and comprehensive educational ebooks—tailored to help individuals organize, manage, and evolve their hobbies and personal passions. From picking up a new craft to mastering long-term skills, we supply the digital ecosystem you need to succeed.</span>
+          <span class="lang-pt">Somos especialistas no desenvolvimento de produtos digitais premium—incluindo aplicativos móveis/web e ebooks educacionais completos—projetados para ajudar você a organizar, gerenciar e evoluir seus hobbies e paixões pessoais. Desde iniciar uma nova atividade até dominar habilidades de longo prazo, fornecemos o ecossistema digital necessário para o seu sucesso.</span>
+        </p>
+        <p class="section-desc reveal">
+          <span class="lang-en">Operating globally with a strong presence in the US and Brazil, we develop sleek, user-friendly digital tools that replace unstructured efforts with premium organization systems. We bridge the gap between passion and structured skill development.</span>
+          <span class="lang-pt">Operando globalmente com forte presença nos EUA e no Brasil, desenvolvemos ferramentas digitais elegantes e intuitivas que substituem esforços desorganizados por sistemas premium de organização. Unimos a paixão ao desenvolvimento estruturado de habilidades.</span>
+        </p>
+        <div class="sobre-valores reveal">
+          <div class="valor-item">
+            <span class="valor-icon">✦</span>
+            <div>
+              <strong class="lang-en">Mission</strong>
+              <strong class="lang-pt">Missão</strong>
+              <p class="lang-en">To empower hobbyists and creators to structure and scale their passions through premium mobile apps and educational materials.</p>
+              <p class="lang-pt">Capacitar entusiastas e criadores a estruturar e expandir suas paixões por meio de aplicativos móveis premium e materiais educacionais.</p>
+            </div>
+          </div>
+          <div class="valor-item">
+            <span class="valor-icon">✦</span>
+            <div>
+              <strong class="lang-en">Vision</strong>
+              <strong class="lang-pt">Visão</strong>
+              <p class="lang-en">To be the absolute global standard in digital hobby organization, tracking systems, and educational ebooks.</p>
+              <p class="lang-pt">Ser a referência global absoluta em organização digital de hobbies, sistemas de rastreamento e ebooks educacionais.</p>
+            </div>
+          </div>
+          <div class="valor-item">
+            <span class="valor-icon">✦</span>
+            <div>
+              <strong class="lang-en">Values</strong>
+              <strong class="lang-pt">Valores</strong>
+              <p class="lang-en">Aesthetics and usability first, expert-verified content, continuous software updates, and exceptional client support.</p>
+              <p class="lang-pt">Estética e usabilidade em primeiro lugar, conteúdo verificado por especialistas, atualizações contínuas de software e suporte excepcional ao cliente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section class="servicos" id="servicos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">
+          <span class="lang-en">What we offer</span>
+          <span class="lang-pt">O que oferecemos</span>
+        </div>
+        <h2 class="section-title reveal">
+          <span class="lang-en">Our Digital Catalog</span>
+          <span class="lang-pt">Nosso Catálogo Digital</span>
+        </h2>
+        <p class="section-desc reveal">
+          <span class="lang-en">Explore our ecosystem of applications, ebooks, and tracking systems designed to help you organize and elevate your personal passions.</span>
+          <span class="lang-pt">Explore nosso ecossistema de aplicativos, ebooks e sistemas de rastreamento projetados para ajudar você a organizar e elevar suas paixões pessoais.</span>
+        </p>
+      </div>
+      <div class="servicos-grid">
+
+        <div class="servico-card reveal servico-card--featured">
+          <div class="featured-badge">
+            <span class="lang-en">Featured</span>
+            <span class="lang-pt">Destaque</span>
+          </div>
+          <div class="servico-icon">📱</div>
+          <h3>
+            <span class="lang-en">Hobby Tracker Pro (App)</span>
+            <span class="lang-pt">Hobby Tracker Pro (App)</span>
+          </h3>
+          <span style="font-size: 0.8rem; color: var(--secondary); display: block; margin-top: -0.5rem; margin-bottom: 1.2rem; font-weight: 600;">
+            <span class="lang-en">v2.4 - Free Trial</span>
+            <span class="lang-pt">v2.4 - Teste Grátis</span>
+          </span>
+          <p class="lang-en">Our core mobile and web app lets you log daily sessions, manage personal collections, set reminders, and see your growth with interactive charts.</p>
+          <p class="lang-pt">Nosso aplicativo mobile/web permite registrar sessões diárias, gerenciar coleções pessoais, definir lembretes e ver sua evolução com gráficos interativos.</p>
+          <ul class="servico-list">
+            <li>
+              <span class="lang-en">Interactive progress dashboards</span>
+              <span class="lang-pt">Painéis de progresso interativos</span>
+            </li>
+            <li>
+              <span class="lang-en">Offline-first tracking features</span>
+              <span class="lang-pt">Funcionalidades de rastreamento offline</span>
+            </li>
+            <li>
+              <span class="lang-en">Goal setting and reminders</span>
+              <span class="lang-pt">Definição de metas e lembretes</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="servico-card reveal">
+          <div class="servico-icon">📚</div>
+          <h3>
+            <span class="lang-en">The Masterclass Series (Ebooks)</span>
+            <span class="lang-pt">Série Masterclass (Ebooks)</span>
+          </h3>
+          <span style="font-size: 0.8rem; color: var(--secondary); display: block; margin-top: -0.5rem; margin-bottom: 1.2rem; font-weight: 600;">
+            <span class="lang-en">PDF & EPUB Formats</span>
+            <span class="lang-pt">Formatos PDF & EPUB</span>
+          </span>
+          <p class="lang-en">In-depth digital manuals and books filled with practical steps, master blueprints, and blueprints written by industry practitioners.</p>
+          <p class="lang-pt">Manuais e livros digitais aprofundados repletos de passos práticos, roteiros e blueprints escritos por praticantes reais da área.</p>
+          <ul class="servico-list">
+            <li>
+              <span class="lang-en">Written by domain experts</span>
+              <span class="lang-pt">Escrito por especialistas na área</span>
+            </li>
+            <li>
+              <span class="lang-en">Actionable guides and blueprints</span>
+              <span class="lang-pt">Guias acionáveis e roteiros práticos</span>
+            </li>
+            <li>
+              <span class="lang-en">Direct PDF and EPUB downloads</span>
+              <span class="lang-pt">Downloads diretos em PDF e EPUB</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="servico-card reveal">
+          <div class="servico-icon">📅</div>
+          <h3>
+            <span class="lang-en">Printable Planners</span>
+            <span class="lang-pt">Planners Imprimíveis</span>
+          </h3>
+          <span style="font-size: 0.8rem; color: var(--secondary); display: block; margin-top: -0.5rem; margin-bottom: 1.2rem; font-weight: 600;">
+            <span class="lang-en">Tablet & Print Optimized</span>
+            <span class="lang-pt">Otimizado para Impressão & Tablet</span>
+          </span>
+          <p class="lang-en">Beautiful PDF templates and trackers designed to lay out your training routines, habits, schedules, and reflection notes on paper or tablet.</p>
+          <p class="lang-pt">Modelos em PDF projetados para estruturar suas rotinas de treino, hábitos, cronogramas e notas de reflexão no papel ou no tablet.</p>
+          <ul class="servico-list">
+            <li>
+              <span class="lang-en">Optimized for GoodNotes & print</span>
+              <span class="lang-pt">Otimizado para GoodNotes e impressão</span>
+            </li>
+            <li>
+              <span class="lang-en">Goal-setting frameworks</span>
+              <span class="lang-pt">Metodologias de definição de metas</span>
+            </li>
+            <li>
+              <span class="lang-en">Habit and reflection journals</span>
+              <span class="lang-pt">Diários de hábitos e reflexões</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="servico-card reveal">
+          <div class="servico-icon">📈</div>
+          <h3>
+            <span class="lang-en">Hobby Spreadsheets</span>
+            <span class="lang-pt">Planilhas Prontas</span>
+          </h3>
+          <span style="font-size: 0.8rem; color: var(--secondary); display: block; margin-top: -0.5rem; margin-bottom: 1.2rem; font-weight: 600;">
+            <span class="lang-en">Google Sheets & Excel</span>
+            <span class="lang-pt">Google Sheets & Excel</span>
+          </span>
+          <p class="lang-en">Highly automated digital spreadsheets to keep track of complex inventories, training history, collection values, or activity schedules.</p>
+          <p class="lang-pt">Planilhas automatizadas para registrar inventários complexos, histórico de treinos, valor de coleções ou cronogramas de atividades.</p>
+          <ul class="servico-list">
+            <li>
+              <span class="lang-en">Highly automated templates</span>
+              <span class="lang-pt">Modelos altamente automatizados</span>
+            </li>
+            <li>
+              <span class="lang-en">Easy-to-use logging sheets</span>
+              <span class="lang-pt">Folhas de registro fáceis de usar</span>
+            </li>
+            <li>
+              <span class="lang-en">Instant setup guides</span>
+              <span class="lang-pt">Guias de configuração instantânea</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="servico-card reveal">
+          <div class="servico-icon">🎬</div>
+          <h3>
+            <span class="lang-en">Video Masterclasses</span>
+            <span class="lang-pt">Masterclasses em Vídeo</span>
+          </h3>
+          <span style="font-size: 0.8rem; color: var(--secondary); display: block; margin-top: -0.5rem; margin-bottom: 1.2rem; font-weight: 600;">
+            <span class="lang-en">Full HD Streaming</span>
+            <span class="lang-pt">Streaming Full HD</span>
+          </span>
+          <p class="lang-en">Step-by-step video tutorials and visual walkthroughs designed to accompany our books for a complete hands-on learning experience.</p>
+          <p class="lang-pt">Tutoriais em vídeo e guias visuais passo a passo desenvolvidos para acompanhar nossos ebooks em uma experiência prática de aprendizado.</p>
+          <ul class="servico-list">
+            <li>
+              <span class="lang-en">Step-by-step video instructions</span>
+              <span class="lang-pt">Instruções em vídeo passo a passo</span>
+            </li>
+            <li>
+              <span class="lang-en">Accessible on mobile & desktop</span>
+              <span class="lang-pt">Acessível em dispositivos móveis e desktop</span>
+            </li>
+            <li>
+              <span class="lang-en">High-definition production</span>
+              <span class="lang-pt">Produção em alta definição</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="servico-card reveal">
+          <div class="servico-icon">🤝</div>
+          <h3>
+            <span class="lang-en">Bilingual Support</span>
+            <span class="lang-pt">Suporte Bilíngue</span>
+          </h3>
+          <span style="font-size: 0.8rem; color: var(--secondary); display: block; margin-top: -0.5rem; margin-bottom: 1.2rem; font-weight: 600;">
+            <span class="lang-en">English & Portuguese</span>
+            <span class="lang-pt">Inglês & Português</span>
+          </span>
+          <p class="lang-en">Dedicated support team operating in English and Portuguese to assist with app updates, book downloads, and setup questions.</p>
+          <p class="lang-pt">Equipe de suporte dedicada operando em inglês e português para auxiliar com atualizações de apps, downloads de livros e dúvidas.</p>
+          <ul class="servico-list">
+            <li>
+              <span class="lang-en">Quick email response times</span>
+              <span class="lang-pt">Respostas rápidas por email</span>
+            </li>
+            <li>
+              <span class="lang-en">Multi-language support (US/BR)</span>
+              <span class="lang-pt">Atendimento bilíngue (EUA/Brasil)</span>
+            </li>
+            <li>
+              <span class="lang-en">Friendly customer assistance</span>
+              <span class="lang-pt">Suporte amigável e personalizado</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIFERENCIAIS ===== -->
+  <section class="diferenciais" id="diferenciais">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">
+          <span class="lang-en">Why Trinity Works</span>
+          <span class="lang-pt">Por que a Trinity funciona</span>
+        </div>
+        <h2 class="section-title reveal">
+          <span class="lang-en">Designed for Enthusiasts</span>
+          <span class="lang-pt">Feito para Entusiastas</span>
+        </h2>
+      </div>
+      <div class="diferenciais-grid">
+        <div class="diferencial-item reveal">
+          <div class="dif-num">01</div>
+          <div class="dif-content">
+            <h3>
+              <span class="lang-en">Software + Ebooks</span>
+              <span class="lang-pt">Software + Ebooks</span>
+            </h3>
+            <p class="lang-en">We combine tracking tools with practical guides, addressing both the conceptual knowledge and daily organization of your passions.</p>
+            <p class="lang-pt">Combinamos ferramentas de rastreamento com guias práticos, cobrindo tanto o aprendizado quanto a organização diária das suas paixões.</p>
+          </div>
+        </div>
+        <div class="diferencial-item reveal">
+          <div class="dif-num">02</div>
+          <div class="dif-content">
+            <h3>
+              <span class="lang-en">Simple & Clean Layouts</span>
+              <span class="lang-pt">Layouts Simples & Limpos</span>
+            </h3>
+            <p class="lang-en">No pop-ups, no generic filler, no distractions. Just ultra-clean interfaces and ebooks that are easy to read on any device.</p>
+            <p class="lang-pt">Sem pop-ups, sem textos genéricos para encher linguiça. Apenas layouts limpos e fáceis de ler em qualquer dispositivo.</p>
+          </div>
+        </div>
+        <div class="diferencial-item reveal">
+          <div class="dif-num">03</div>
+          <div class="dif-content">
+            <h3>
+              <span class="lang-en">Written by Real Experts</span>
+              <span class="lang-pt">Apenas Especialistas Reais</span>
+            </h3>
+            <p class="lang-en">We don't sell generic, AI-written summaries. Every guide is written and verified by real practitioners who actually master their respective hobbies.</p>
+            <p class="lang-pt">Não vendemos resumos genéricos escritos por IA. Cada guia é escrito e validado por praticantes reais que dominam seus respectivos hobbies.</p>
+          </div>
+        </div>
+        <div class="diferencial-item reveal">
+          <div class="dif-num">04</div>
+          <div class="dif-content">
+            <h3>
+              <span class="lang-en">Always-On Help</span>
+              <span class="lang-pt">Ajuda Sempre Disponível</span>
+            </h3>
+            <p class="lang-en">Stuck with download links or need help configuring a tracker? Send us a message and a real human from our team will reply in hours.</p>
+            <p class="lang-pt">Teve problemas com downloads ou precisa de ajuda para configurar uma planilha? Envie uma mensagem e um humano responderá em poucas horas.</p>
+          </div>
+        </div>
+        <div class="diferencial-item reveal">
+          <div class="dif-num">05</div>
+          <div class="dif-content">
+            <h3>
+              <span class="lang-en">Natively Bilingual</span>
+              <span class="lang-pt">Nativo em Dois Idiomas</span>
+            </h3>
+            <p class="lang-en">All of our applications, planners, and ebooks are written natively in both English and Portuguese. No automated machine translations.</p>
+            <p class="lang-pt">Todos os nossos aplicativos, planners e ebooks são escritos de forma nativa em inglês e português. Sem traduções automáticas mal feitas.</p>
+          </div>
+        </div>
+        <div class="diferencial-item reveal">
+          <div class="dif-num">06</div>
+          <div class="dif-content">
+            <h3>
+              <span class="lang-en">Free Lifetime Updates</span>
+              <span class="lang-pt">Atualizações Gratuitas</span>
+            </h3>
+            <p class="lang-en">Buy once, get updates forever. We actively update our ebooks and tracker sheets based on community feedback, at no extra cost.</p>
+            <p class="lang-pt">Compre uma vez e tenha atualizações para sempre. Atualizamos nossos ebooks e planilhas com base no feedback dos usuários, sem custo extra.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NÚMEROS ===== -->
+  <section class="numeros" id="numeros">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">
+          <span class="lang-en">Our Milestones</span>
+          <span class="lang-pt">Nossas Conquistas</span>
+        </div>
+        <h2 class="section-title reveal">
+          <span class="lang-en">Trinity in Numbers</span>
+          <span class="lang-pt">A Trinity em Números</span>
+        </h2>
+      </div>
+      <div class="numeros-grid">
+        <div class="numero-card reveal">
+          <span class="numero-val" data-target="4">0</span>
+          <span class="numero-suffix"></span>
+          <p>
+            <span class="lang-en">Years in Market</span>
+            <span class="lang-pt">Anos de Mercado</span>
+          </p>
+        </div>
+        <div class="numero-card reveal">
+          <span class="numero-val" data-target="350">0</span>
+          <span class="numero-suffix">+</span>
+          <p>
+            <span class="lang-en">Clients Served</span>
+            <span class="lang-pt">Clientes Atendidos</span>
+          </p>
+        </div>
+        <div class="numero-card reveal">
+          <span class="numero-val" data-target="1500">0</span>
+          <span class="numero-suffix">+</span>
+          <p>
+            <span class="lang-en">Digital Product Copies Sold</span>
+            <span class="lang-pt">Cópias de Produtos Digitais Vendidas</span>
+          </p>
+        </div>
+        <div class="numero-card reveal">
+          <span class="numero-val" data-target="98">0</span>
+          <span class="numero-suffix">%</span>
+          <p>
+            <span class="lang-en">Satisfaction Rate</span>
+            <span class="lang-pt">Taxa de Satisfação</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <div class="cta-orb"></div>
+      <h2 class="reveal lang-en">Ready to take your hobbies seriously?</h2>
+      <h2 class="reveal lang-pt">Pronto para levar seus hobbies a sério?</h2>
+      <p class="reveal">
+        <span class="lang-en">Get instant access to our tracking applications and practical guides to organize your activities today.</span>
+        <span class="lang-pt">Tenha acesso imediato aos nossos aplicativos de rastreamento e guias práticos para organizar suas atividades hoje mesmo.</span>
+      </p>
+      <a href="#contato" class="btn btn-primary btn-lg reveal">
+        <span class="lang-en">Explore Our Catalog →</span>
+        <span class="lang-pt">Conhecer Nosso Catálogo →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="contato" id="contato">
+    <div class="container contato-grid">
+      <div class="contato-info">
+        <div class="section-label reveal">
+          <span class="lang-en">Get in touch</span>
+          <span class="lang-pt">Entre em contato</span>
+        </div>
+        <h2 class="section-title reveal">
+          <span class="lang-en">Let's Connect</span>
+          <span class="lang-pt">Fale Conosco</span>
+        </h2>
+        <p class="section-desc reveal">
+          <span class="lang-en">Have questions about our apps, ebook downloads, or need support? Our team is ready to assist you. Drop us a line below.</span>
+          <span class="lang-pt">Tem dúvidas sobre nossos aplicativos, downloads de ebooks ou precisa de suporte? Nossa equipe está pronta para ajudar. Envie sua mensagem.</span>
+        </p>
+        <div class="contato-items reveal">
+          <div class="contato-item">
+            <div class="contato-item-icon">✉️</div>
+            <div>
+              <strong class="lang-en">Email Support</strong>
+              <strong class="lang-pt">Suporte por E-mail</strong>
+              <a href="mailto:Trinityag01@gmail.com">Trinityag01@gmail.com</a>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-item-icon">📍</div>
+            <div>
+              <strong class="lang-en">Location</strong>
+              <strong class="lang-pt">Localização</strong>
+              <span class="lang-en">Brazil &amp; US — International Support</span>
+              <span class="lang-pt">Brasil &amp; EUA — Suporte Internacional</span>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-item-icon">⏰</div>
+            <div>
+              <strong class="lang-en">Business Hours</strong>
+              <strong class="lang-pt">Horário de Atendimento</strong>
+              <span class="lang-en">Mon–Fri, 9am to 6pm</span>
+              <span class="lang-pt">Seg–Sex, das 9h às 18h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contato-form reveal" id="contact-form" novalidate="">
+        <div class="form-group">
+          <label for="nome">
+            <span class="lang-en">Full Name</span>
+            <span class="lang-pt">Nome Completo</span>
+          </label>
+          <input type="text" id="nome" name="nome" placeholder="Your name" required="">
+        </div>
+        <div class="form-group">
+          <label for="email">
+            <span class="lang-en">Email Address</span>
+            <span class="lang-pt">Endereço de E-mail</span>
+          </label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required="">
+        </div>
+        <div class="form-group">
+          <label for="empresa">
+            <span class="lang-en">Target Hobby / Interest</span>
+            <span class="lang-pt">Hobby / Área de Interesse</span>
+          </label>
+          <input type="text" id="empresa" name="empresa" placeholder="e.g. Photography, Cooking, Fitness">
+        </div>
+        <div class="form-group">
+          <label for="servico">
+            <span class="lang-en">Product Area of Interest</span>
+            <span class="lang-pt">Área de Interesse do Produto</span>
+          </label>
+          <select id="servico" name="servico">
+            <option value="" class="lang-en">Select a product area</option>
+            <option value="" class="lang-pt">Selecione uma área de produto</option>
+            <option value="apps" class="lang-en">Hobby Tracking Apps</option>
+            <option value="apps" class="lang-pt">Apps de Rastreamento de Hobbies</option>
+            <option value="ebooks" class="lang-en">Educational Ebooks</option>
+            <option value="ebooks" class="lang-pt">Ebooks Educacionais</option>
+            <option value="planners" class="lang-en">Digital Planners &amp; Journals</option>
+            <option value="planners" class="lang-pt">Planners &amp; Diários Digitais</option>
+            <option value="trackers" class="lang-en">Interactive Trackers</option>
+            <option value="trackers" class="lang-pt">Rastreadores Interativos</option>
+            <option value="other" class="lang-en">Other Digital Products</option>
+            <option value="other" class="lang-pt">Outros Produtos Digitais</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">
+            <span class="lang-en">Message</span>
+            <span class="lang-pt">Mensagem</span>
+          </label>
+          <textarea id="mensagem" name="mensagem" placeholder="How can we help you master your hobby?..." rows="4" required=""></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+          <span class="btn-text">
+            <span class="lang-en">Send Message</span>
+            <span class="lang-pt">Enviar Mensagem</span>
+          </span>
+          <span class="btn-icon">→</span>
+        </button>
+        <div class="form-success" id="form-success">
+          <span class="lang-en">✅ Message sent! We will contact you shortly.</span>
+          <span class="lang-pt">✅ Mensagem enviada! Retornaremos em breve.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">TD</span>
+        <span class="logo-text">Trinity <strong>Digital</strong></span>
+      </div>
+      <p class="footer-desc">
+        <span class="lang-en">Empowering your hobbies, skills, and personal passions through state-of-the-art mobile/web applications and educational ebooks.</span>
+        <span class="lang-pt">Impulsionando seus hobbies, habilidades e paixões pessoais através de aplicativos móveis/web de ponta e ebooks educacionais.</span>
+        <br>
+        <span class="lang-en">Trinity Digital Company LLC — Continuous evolution in the digital world.</span>
+        <span class="lang-pt">Trinity Digital Company LLC — Evolução contínua no mundo digital.</span>
+      </p>
+      <nav class="footer-nav">
+        <a href="#sobre">
+          <span class="lang-en">About</span>
+          <span class="lang-pt">Sobre</span>
+        </a>
+        <a href="#servicos">
+          <span class="lang-en">Products</span>
+          <span class="lang-pt">Produtos</span>
+        </a>
+        <a href="#diferenciais">
+          <span class="lang-en">Why Us</span>
+          <span class="lang-pt">Diferenciais</span>
+        </a>
+        <a href="#contato">
+          <span class="lang-en">Contact</span>
+          <span class="lang-pt">Contato</span>
+        </a>
+      </nav>
+      <div class="footer-bottom">
+        <span>
+          <span class="lang-en">© 2026 Trinity Digital Company LLC (EIN: 35-2967700). All rights reserved.</span>
+          <span class="lang-pt">© 2026 Trinity Digital Company LLC (EIN: 35-2967700). Todos os direitos reservados.</span>
+        </span>
+        <a href="mailto:Trinityag01@gmail.com">Trinityag01@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

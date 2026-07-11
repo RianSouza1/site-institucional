@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusPay | Soluções de Pagamento e Infraestrutura Financeira</title>
+  <meta name="description" content="Acelere seu negócio com a NexusPay. Gateway de pagamentos estável, checkout transparente, Pix inteligente e as melhores taxas do mercado. Conheça nossos planos!">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Estilos específicos da Home Page */
+    
+    /* Hero Section */
+    .hero {
+      padding: 10rem 0 6rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.05) 50%, rgba(0,0,0,0) 70%);
+      border-radius: 50%;
+      z-index: -1;
+      filter: blur(40px);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -10%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, rgba(99, 102, 241, 0.02) 50%, rgba(0,0,0,0) 70%);
+      border-radius: 50%;
+      z-index: -1;
+      filter: blur(30px);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero-content h1 {
+      font-size: 3.5rem;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+    .hero-content p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
+      max-width: 540px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    /* Mockup/Dashboard Visual */
+    .hero-visual {
+      position: relative;
+    }
+    .dashboard-mock {
+      padding: 1.5rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-premium);
+      position: relative;
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.75rem;
+    }
+    .dots {
+      display: flex;
+      gap: 6px;
+    }
+    .dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      opacity: 0.5;
+    }
+    .dots span:nth-child(1) { background: #ef4444; opacity: 1; }
+    .dots span:nth-child(2) { background: #f59e0b; opacity: 1; }
+    .dots span:nth-child(3) { background: #10b981; opacity: 1; }
+    
+    .dashboard-chart {
+      height: 140px;
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      margin-top: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .chart-bar {
+      flex: 1;
+      background: rgba(99, 102, 241, 0.15);
+      border-radius: 4px 4px 0 0;
+      transition: height 1s ease;
+      position: relative;
+    }
+    .chart-bar.active {
+      background: var(--accent-gradient);
+    }
+    .chart-bar::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      border-radius: 2px 2px 0 0;
+    }
+    .chart-bar.active::after {
+      background: var(--accent-light);
+    }
+    
+    /* Features Section */
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .section-title h2 {
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+    }
+    .section-title p {
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .features {
+      padding: 6rem 0;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .feature-card {
+      padding: 2.5rem;
+      border: 1px solid var(--border-color);
+      transition: all var(--transition-normal);
+      border-radius: var(--radius-lg);
+    }
+    .feature-card:hover {
+      border-color: var(--accent-light);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.2);
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .feature-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    .feature-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    
+    /* Solutions Section */
+    .solutions {
+      padding: 6rem 0;
+      background: var(--bg-secondary);
+      border-y: 1px solid var(--border-color);
+    }
+    .solutions-row {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: center;
+      margin-bottom: 6rem;
+    }
+    .solutions-row:last-child {
+      margin-bottom: 0;
+    }
+    .solutions-row.reverse {
+      grid-template-columns: 1.2fr 1fr;
+    }
+    .solutions-row.reverse .solutions-img {
+      order: 1;
+    }
+    .solutions-row.reverse .solutions-text {
+      order: 2;
+    }
+    .solutions-text h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .solutions-text p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+    .solutions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .solutions-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .solutions-list svg {
+      color: var(--success);
+      flex-shrink: 0;
+    }
+    .solutions-img {
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      border-radius: var(--radius-lg);
+    }
+    
+    /* Pricing Section */
+    .pricing {
+      padding: 6rem 0;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+    .price-card {
+      padding: 3rem 2.25rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-normal);
+      position: relative;
+    }
+    .price-card.popular {
+      border-color: var(--accent);
+      background: linear-gradient(180deg, rgba(79, 70, 229, 0.03) 0%, rgba(0,0,0,0) 100%);
+      box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.15);
+    }
+    .popular-tag {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: var(--accent-gradient);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .price-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-light);
+    }
+    .price-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+    .price-value {
+      font-size: 2.75rem;
+      font-weight: 800;
+      font-family: var(--font-title);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .price-value span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+    .price-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      min-height: 2.7rem;
+    }
+    .price-features {
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex-grow: 1;
+    }
+    .price-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    .price-features svg {
+      color: var(--accent-light);
+      flex-shrink: 0;
+    }
+    
+    /* FAQ Section */
+    .faq {
+      padding: 6rem 0;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+    }
+    .faq-grid {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .faq-item {
+      padding: 1.5rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      transition: all var(--transition-normal);
+    }
+    .faq-item:hover {
+      border-color: var(--border-color-hover);
+    }
+    .faq-question {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .faq-answer {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    
+    /* CTA Section */
+    .cta {
+      padding: 8rem 0;
+      text-align: center;
+      position: relative;
+    }
+    .cta-box {
+      padding: 4rem 2rem;
+      border: 1px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, rgba(0,0,0,0) 70%);
+      z-index: -1;
+      filter: blur(20px);
+    }
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .cta p {
+      color: var(--text-secondary);
+      max-width: 500px;
+      margin: 0 auto 2.5rem auto;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+      }
+      .hero-content p {
+        margin: 0 auto 2.5rem auto;
+      }
+      .hero-actions {
+        justify-content: center;
+      }
+      .hero-visual {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .solutions-row, .solutions-row.reverse {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .solutions-row.reverse .solutions-img {
+        order: 2;
+      }
+      .solutions-row.reverse .solutions-text {
+        order: 1;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo" id="nav-logo">
+        <div class="logo-icon">N</div>
+        <span>NexusPay</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+        <li><a href="contato.html" class="nav-link">Contato</a></li>
+        <li><a href="politica-privacidade.html" class="nav-link">Privacidade</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1>Infraestrutura de <span class="gradient-text">Pagamentos</span> para Negócios de Alta Performance</h1>
+          <p>Aumente sua conversão com um checkout ultra veloz, Pix automatizado, gestão de assinaturas e estabilidade garantida de 99,99%. Tudo em uma única plataforma.</p>
+          <div class="hero-actions">
+            <a href="contato.html" class="btn btn-primary">Começar Agora</a>
+            <a href="#solucoes" class="btn btn-secondary">Ver Soluções</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="glass-panel dashboard-mock">
+            <div class="dashboard-header">
+              <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">nexuspay.com/dashboard</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase;">Volume Transacionado</span>
+                <h3 style="font-size: 1.5rem; font-family: var(--font-title); font-weight: 800; margin-top: 0.25rem;">R$ 148.920,45</h3>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--success-light); font-weight: 600; background: rgba(16, 185, 129, 0.1); padding: 0.15rem 0.5rem; border-radius: var(--radius-full);">+12.4%</span>
+            </div>
+            
+            <div class="dashboard-chart">
+              <div class="chart-bar" style="height: 30%;"></div>
+              <div class="chart-bar" style="height: 45%;"></div>
+              <div class="chart-bar" style="height: 35%;"></div>
+              <div class="chart-bar" style="height: 60%;"></div>
+              <div class="chart-bar" style="height: 50%;"></div>
+              <div class="chart-bar" style="height: 80%;"></div>
+              <div class="chart-bar active" style="height: 95%;"></div>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem;">
+              <span>Seg</span>
+              <span>Ter</span>
+              <span>Qua</span>
+              <span>Qui</span>
+              <span>Sex</span>
+              <span>Sáb</span>
+              <span>Dom</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>Por que escolher a NexusPay?</h2>
+        <p>Desenvolvemos soluções para eliminar atritos financeiros e acelerar o crescimento do seu negócio digital.</p>
+      </div>
+      <div class="features-grid">
+        <div class="glass-panel feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h3>Segurança com Nível Bancário</h3>
+          <p>Ambiente totalmente em conformidade com o padrão PCI DSS Nível 1. Seus dados e os dados de seus clientes criptografados com o máximo rigor.</p>
+        </div>
+        <div class="glass-panel feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+          <h3>Pix Instantâneo e Conciliado</h3>
+          <p>Confirmação de recebimento em milissegundos com webhooks estáveis para automatizar a liberação de produtos de forma ágil e inteligente.</p>
+        </div>
+        <div class="glass-panel feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <h3>Checkout Transparente</h3>
+          <p>Mantenha seus clientes dentro do seu domínio durante o pagamento. Menos cliques, menos abandonos, mais conversão em vendas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section class="solutions" id="solucoes">
+    <div class="container">
+      <div class="solutions-row">
+        <div class="solutions-text">
+          <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent-light); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Processamento de Cartões</span>
+          <h3>Conversão Inteligente e Retentiva</h3>
+          <p>Aumente a taxa de aprovação de cartões de crédito utilizando nosso sistema de retentativa inteligente com múltiplos adquirentes.</p>
+          <ul class="solutions-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Antifraude integrado com inteligência artificial</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Recorrência e cobranças inteligentes automatizadas</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Suporte a cartões internacionais e bandeiras locais</span>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <div class="glass-panel solutions-img">
+            <h4 style="margin-bottom: 1rem; font-size: 1rem;">Pagamento por Cartão</h4>
+            <div style="border: 1px solid var(--border-color); padding: 1rem; border-radius: var(--radius-md); display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+              <div style="width: 40px; height: 26px; background: #1e293b; border-radius: 4px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:0.7rem; color:var(--text-muted);">VISA</div>
+              <div style="flex-grow:1;">
+                <p style="font-size:0.85rem; font-weight:600;">•••• •••• •••• 4590</p>
+                <p style="font-size:0.7rem; color:var(--text-muted);">Expira em 12/30</p>
+              </div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
+              <span style="color:var(--text-secondary);">Total a pagar:</span>
+              <span style="font-weight:700; color:var(--accent-light);">R$ 299,00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="solutions-row reverse">
+        <div class="solutions-text">
+          <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent-light); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Cobrança Via Pix</span>
+          <h3>O Meio de Pagamento mais Rápido</h3>
+          <p>Ofereça Pix dinâmico com QR Code e Pix Copia e Cola. Confirmação instantânea de transações direto no seu ERP ou plataforma digital.</p>
+          <ul class="solutions-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Atualização automática do status da venda</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Webhook redundante com entrega imediata</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Tarifas simplificadas e sem taxa de adesão</span>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <div class="glass-panel solutions-img" style="text-align: center;">
+            <h4 style="margin-bottom: 1rem; font-size: 1rem;">QR Code Pix Dinâmico</h4>
+            <!-- Desenho simples do QR Code com SVG -->
+            <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto 1rem auto; background: white; padding: 6px; border-radius: var(--radius-sm);">
+              <rect width="100" height="100" fill="white"/>
+              <rect x="10" y="10" width="20" height="20" fill="black"/>
+              <rect x="15" y="15" width="10" height="10" fill="white"/>
+              <rect x="70" y="10" width="20" height="20" fill="black"/>
+              <rect x="75" y="15" width="10" height="10" fill="white"/>
+              <rect x="10" y="70" width="20" height="20" fill="black"/>
+              <rect x="15" y="75" width="10" height="10" fill="white"/>
+              <!-- Elementos internos mock -->
+              <rect x="40" y="10" width="10" height="30" fill="black"/>
+              <rect x="40" y="50" width="20" height="10" fill="black"/>
+              <rect x="70" y="40" width="20" height="20" fill="black"/>
+              <rect x="10" y="40" width="20" height="10" fill="black"/>
+              <rect x="40" y="70" width="10" height="20" fill="black"/>
+              <rect x="60" y="70" width="30" height="10" fill="black"/>
+              <rect x="60" y="85" width="15" height="5" fill="black"/>
+              <rect x="80" y="80" width="10" height="10" fill="black"/>
+            </svg>
+            <span style="font-size:0.75rem; color:var(--text-muted); display:block; margin-bottom: 0.5rem;">Copie a chave para pagar no app do banco</span>
+            <button class="btn btn-secondary" style="font-size:0.8rem; padding: 0.4rem 1rem;">Copiar Código Pix</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section class="pricing">
+    <div class="container">
+      <div class="section-title">
+        <h2>Planos e Condições Transparentes</h2>
+        <p>Escolha o plano ideal para a sua operação. Sem taxas de adesão, mensalidades surpresas ou custos de integração.</p>
+      </div>
+      <div class="pricing-grid">
+        <!-- Plano Lite -->
+        <div class="glass-panel price-card">
+          <div class="price-name">Lite</div>
+          <div class="price-value">R$ 0 <span>/ mensal</span></div>
+          <div class="price-desc">Ideal para iniciantes e novos negócios validando suas vendas.</div>
+          <ul class="price-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Pix: 0,99% por transação</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Crédito: 3,99% + R$ 0,50</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Recebimento em D+30</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Suporte via e-mail corporativo</span>
+            </li>
+          </ul>
+          <a href="contato.html" class="btn btn-secondary">Começar Agora</a>
+        </div>
+        <!-- Plano Pro -->
+        <div class="glass-panel price-card popular">
+          <span class="popular-tag">Mais Escolhido</span>
+          <div class="price-name" style="color: var(--accent-light);">Pro</div>
+          <div class="price-value">R$ 99 <span>/ mensal</span></div>
+          <div class="price-desc">Para empresas com operação consolidada buscando alta performance e menores taxas.</div>
+          <ul class="price-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Pix: 0,79% (máximo R$ 5,00)</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Crédito: 3,29% + R$ 0,30</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Recebimento em D+14</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Checkout Transparente Ilimitado</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Suporte Prioritário por WhatsApp/Chat</span>
+            </li>
+          </ul>
+          <a href="contato.html" class="btn btn-primary">Contratar Plano Pro</a>
+        </div>
+        <!-- Plano Enterprise -->
+        <div class="glass-panel price-card">
+          <div class="price-name">Enterprise</div>
+          <div class="price-value" style="font-size: 2.25rem;">Customizado</div>
+          <div class="price-desc">Soluções modulares para operações com grandes volumes ou necessidades de split.</div>
+          <ul class="price-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Taxas negociadas sob medida</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Antecipação flexível em D+1</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Split de pagamentos complexo</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Gerente de contas dedicado</span>
+            </li>
+          </ul>
+          <a href="contato.html" class="btn btn-secondary">Falar com Consultor</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-title">
+        <h2>Perguntas Frequentes</h2>
+        <p>Consulte as dúvidas mais comuns sobre nossa plataforma e processo de ativação comercial.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="glass-panel faq-item">
+          <div class="faq-question">
+            Qual o prazo de ativação da minha conta?
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Após a submissão dos documentos cadastrais (CNPJ ativo, dados de contato e do responsável legal), nossa equipe de análise realiza a validação de risco em até 24 horas úteis. Uma vez aprovada, a integração técnica pode ser ativada imediatamente em produção.
+          </div>
+        </div>
+        <div class="glass-panel faq-item">
+          <div class="faq-question">
+            O checkout transparente funciona em celulares?
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Sim, toda a nossa infraestrutura de checkout transparente é 100% responsiva, desenvolvida focando na experiência de navegação e conversão em smartphones e tablets, minimizando campos e agilizando a digitação de dados.
+          </div>
+        </div>
+        <div class="glass-panel faq-item">
+          <div class="faq-question">
+            A NexusPay suporta Split de Pagamentos?
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Sim, oferecemos suporte nativo a Split de Pagamentos em nossa API, ideal para marketplaces e plataformas que precisam dividir as receitas entre múltiplos recebedores de forma automatizada no momento da transação.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta">
+    <div class="container">
+      <div class="glass-panel cta-box">
+        <h2>Pronto para otimizar seus pagamentos?</h2>
+        <p>Crie sua conta em poucos minutos e comece a usufruir da melhor infraestrutura financeira.</p>
+        <a href="contato.html" class="btn btn-primary">Falar com Nossos Especialistas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">N</div>
+            <span>NexusPay</span>
+          </a>
+          <p>Soluções inteligentes de pagamentos e tecnologia para acelerar o crescimento do seu negócio com segurança e estabilidade.</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Institucional</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="contato.html">Fale Conosco</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="politica-privacidade.html">Privacidade</a></li>
+            <li><a href="termos-uso.html">Termos de Uso</a></li>
+            <li><a href="politica-reembolso.html">Reembolsos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Contato</h3>
+          <ul class="footer-contact-info">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>(11) 4003-0000</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>contato@nexuspay.com.br</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Av. Paulista, 1000 - Bela Vista, São Paulo - SP, 01310-100</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-compliance">
+        <div class="compliance-info">
+          <strong>NEXUSPAY SOLUCOES DE PAGAMENTO E TECNOLOGIA LTDA</strong><br>
+          CNPJ sob o nº 34.567.890/0001-21 | Endereço: Av. Paulista, 1000, Bela Vista, São Paulo - SP, CEP 01310-100.<br>
+          A NexusPay é uma instituição de pagamento que atua como facilitadora e gateway de transações financeiras, não sendo uma instituição financeira regulada pelo Banco Central que realiza captação de recursos públicos ou concessão direta de crédito. Todo o processamento de pagamentos obedece às normas da LGPD e aos requisitos de segurança do PCI DSS.
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 NexusPay. Todos os direitos reservados.</p>
+          <p>Desenvolvido com foco em segurança e compliance.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

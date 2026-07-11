@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós | NexusPay</title>
+  <meta name="description" content="Conheça a história, a missão e os valores da NexusPay. Somos focados em revolucionar a infraestrutura financeira de empresas com segurança e estabilidade.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Estilos específicos da página Sobre */
+    .about-hero {
+      padding: 10rem 0 6rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, rgba(0,0,0,0) 70%);
+      filter: blur(30px);
+      z-index: -1;
+    }
+    .about-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-hero p {
+      color: var(--text-secondary);
+      font-size: 1.15rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .story-section {
+      padding: 5rem 0;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .story-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .story-text p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+    .story-visual {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      position: relative;
+    }
+    
+    .value-card-small {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .value-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-md);
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .value-info h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .value-info p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    
+    .mvv-section {
+      padding: 5rem 0;
+      background: var(--bg-secondary);
+      border-y: 1px solid var(--border-color);
+    }
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .mvv-card {
+      padding: 2.5rem;
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+    .mvv-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-light);
+    }
+    .mvv-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    
+    @media (max-width: 992px) {
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .mvv-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo" id="nav-logo">
+        <div class="logo-icon">N</div>
+        <span>NexusPay</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="sobre.html" class="nav-link active">Sobre Nós</a></li>
+        <li><a href="contato.html" class="nav-link">Contato</a></li>
+        <li><a href="politica-privacidade.html" class="nav-link">Privacidade</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="about-hero">
+    <div class="container">
+      <h1 class="gradient-text">Nossa Missão é Simplificar Finanças</h1>
+      <p>Desenvolvemos a infraestrutura tecnológica que permite a negócios de todos os tamanhos aceitarem pagamentos online e gerirem seus recursos com segurança absoluta.</p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-text">
+          <h2>Nossa Trajetória</h2>
+          <p>A NexusPay nasceu do desejo de solucionar um dos maiores gargalos das empresas digitais no Brasil: a instabilidade no processamento de transações e a burocracia excessiva nos meios de pagamento.</p>
+          <p>Reunimos engenheiros de software e especialistas do mercado de meios de pagamento para construir uma API robusta, modular e escalável. Desde o início, nosso foco tem sido prover estabilidade de nível bancário e uma experiência de checkout simplificada, garantindo que as vendas de nossos parceiros nunca parem.</p>
+          <p>Hoje, somos uma facilitadora de pagamentos confiada por centenas de empresas que gerenciam desde vendas pontuais até complexas operações de marketplace com múltiplos recebedores.</p>
+        </div>
+        <div class="glass-panel story-visual">
+          <h3 style="font-family: var(--font-title); font-size: 1.25rem;">Nossos Pilares Fundamentais</h3>
+          
+          <div class="value-card-small">
+            <div class="value-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="value-info">
+              <h4>Segurança Inabalável</h4>
+              <p>Seguimos as melhores práticas de compliance e possuímos padrões equivalentes aos dos grandes bancos mundiais.</p>
+            </div>
+          </div>
+          
+          <div class="value-card-small">
+            <div class="value-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="value-info">
+              <h4>Alta Estabilidade</h4>
+              <p>Trabalhamos com redundância de adquirentes para garantir transações ativas 24 horas por dia, 7 dias por semana.</p>
+            </div>
+          </div>
+
+          <div class="value-card-small">
+            <div class="value-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2 12 2"></polygon><polygon points="2 17 12 22 22 17 2 17 2 17"></polygon><polygon points="2 12 12 17 22 12 2 12 2 12"></polygon></svg>
+            </div>
+            <div class="value-info">
+              <h4>Foco no Desenvolvedor</h4>
+              <p>Documentação clara e integrações simples. Permitimos que sua infraestrutura financeira seja configurada em minutos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION VISION VALUES -->
+  <section class="mvv-section">
+    <div class="container">
+      <div class="mvv-grid">
+        <div class="glass-panel mvv-card">
+          <h3>Missão</h3>
+          <p>Prover tecnologia de pagamentos confiável e acessível, acelerando o crescimento de negócios e empoderando empreendedores com ferramentas financeiras modernas e descomplicadas.</p>
+        </div>
+        <div class="glass-panel mvv-card">
+          <h3>Visão</h3>
+          <p>Tornar-se a referência nacional em infraestrutura de pagamento modular, sendo reconhecida pela excelência em segurança, transparência comercial e estabilidade técnica.</p>
+        </div>
+        <div class="glass-panel mvv-card">
+          <h3>Valores</h3>
+          <p>Comprometimento ético, transparência total nas taxas, segurança em primeiro lugar, obsessão pela estabilidade técnica e foco absoluto no sucesso do cliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">N</div>
+            <span>NexusPay</span>
+          </a>
+          <p>Soluções inteligentes de pagamentos e tecnologia para acelerar o crescimento do seu negócio com segurança e estabilidade.</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Institucional</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="contato.html">Fale Conosco</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="politica-privacidade.html">Privacidade</a></li>
+            <li><a href="termos-uso.html">Termos de Uso</a></li>
+            <li><a href="politica-reembolso.html">Reembolsos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Contato</h3>
+          <ul class="footer-contact-info">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>(11) 4003-0000</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>contato@nexuspay.com.br</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Av. Paulista, 1000 - Bela Vista, São Paulo - SP, 01310-100</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-compliance">
+        <div class="compliance-info">
+          <strong>NEXUSPAY SOLUCOES DE PAGAMENTO E TECNOLOGIA LTDA</strong><br>
+          CNPJ sob o nº 34.567.890/0001-21 | Endereço: Av. Paulista, 1000, Bela Vista, São Paulo - SP, CEP 01310-100.<br>
+          A NexusPay é uma instituição de pagamento que atua como facilitadora e gateway de transações financeiras, não sendo uma instituição financeira regulada pelo Banco Central que realiza captação de recursos públicos ou concessão direta de crédito. Todo o processamento de pagamentos obedece às normas da LGPD e aos requisitos de segurança do PCI DSS.
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 NexusPay. Todos os direitos reservados.</p>
+          <p>Desenvolvido com foco em segurança e compliance.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
