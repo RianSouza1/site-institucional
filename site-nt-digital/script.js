@@ -58,8 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Apply saved preference or default to English
-  const savedLang = localStorage.getItem('preferred-lang') || 
-                    (navigator.language.startsWith('pt') ? 'pt' : 'en');
+  const savedLang = localStorage.getItem('preferred-lang') || 'en';
   setLanguage(savedLang);
 
   // --- NAVBAR SCROLL EFFECT ---
